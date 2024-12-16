@@ -7,31 +7,25 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+      <ul class="navbar-nav me-auto ">
+        <li class="nav-item" id="home_link">
           <i class="fa-solid fa-house"></i>
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
 
-
         <% if user_signed_in? %>
-        <li>
-          <p>User: <%= current_user.email %></p>
-        </li>
+          <li>
+            <p>User: <%= current_user.email %></p>
+          </li>
         <% end %>
       </ul>
-
-
 
       <% if user_signed_in? %>
         <i class="fa-solid fa-right-from-bracket"></i>
         <%= link_to "Log off", destroy_user_session_path, class: "btn mr-2",method: :delete, data: { turbo_method: :delete } %>
       <% else %>
-        <a class="btn btn-outline-primary mr-2" href="#">Login</a>
+        <a class="btn btn-outline-primary" href="#">Login</a>
       <% end %>
-
-
-
     </div>
   </div>
 </nav>

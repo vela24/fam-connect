@@ -32,11 +32,25 @@
 
 #navbarTogglerDemo02 {
 
+  ul {
+    text-align: center;
+    margin: 0 auto;
 
-  ul li .nav-link {
-    display: inline;
-  }
-}
+    #home_link {
+      padding-right: 80px;
+    }
+    li {
+      padding-bottom: 2px;
+      p {
+        margin-bottom: initial;
+      }
+      .nav-link {
+        display: inline;
+      } // .nav-link
+    } // li
+
+  } // ul
+} // #navbarTogglerDemo02
 
 
 
